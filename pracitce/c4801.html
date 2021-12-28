@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.8 遍历元素</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                $("li").each(function (index, element) {
+                    var txt = "第" + (index + 1) + "个li元素";
+                    $(element).text(txt);
+                })
+            })            
+        })
+    </script>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <input id="btn" type="button" value="添加内容">
+</body>
+</html>

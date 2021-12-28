@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.8 遍历元素 为每个li元素设置不同的背景颜色</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            // 定义颜色数组
+            var colors = ["hotpink", "red", "orange", "yellow", "lightgreen", "blue"];
+
+            // 为元素添加背景颜色
+            $("#btn").click(function () {
+                $("li").each(function(index) {
+                    $(this).css("background-color", colors[index])
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <input id="btn" type="button" value="添加背景颜色">
+</body>
+</html>

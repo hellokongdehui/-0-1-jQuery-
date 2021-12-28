@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.8 遍历元素 为每个li元素添加内容</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            // 定义数组
+            var arr = ["HTML", "CSS", "JavaScript", "jQuery", "Vue.js"];
+
+            $("#btn").click(function () {
+                // 将数组元素一一赋值给对应索引号的li元素
+                $("li").each(function (index) {
+                    var txt = arr[index];
+                    $(this).text(txt);
+                });
+            });
+        })
+    </script>
+</head>
+<body>
+    <ul style="color: blue">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <input id="btn" type="button" value="添加内容" style="color: hotpink; background-color: lightblue;" />
+</body>
+</html>

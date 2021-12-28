@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.2 样式操作 滚动条位置</title>
+    <style type="text/css">
+        body{height: 1800px;}
+    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $(window).scroll(function () {
+                var top = $(this).scrollTop();
+                console.log("滚动距离:"+ top + "px");
+            });
+        })
+    </script>
+</head>
+<body>
+    <h1>5.2.3 个别样式操作</h1>
+    <h2>滚动条位置</h2>
+</body>
+</html>
